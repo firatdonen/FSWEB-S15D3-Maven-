@@ -37,14 +37,14 @@ String text="When the offensive resumed," +
         " increased." + " French and Italian forces evacuated from Anatolia." +
         " The Allies offered an armistice to the Turks, which Mustafa Kemal " +
         "refused.";
-Map<String, Integer> wordCount=calculateWord(text);
+Map<String, Integer> wordCount=calculatedWord(text);
         System.out.println(wordCount);
 
     }
 
-    public static Map<String,Integer> calculateWord(String text){
+    public static Map<String,Integer> calculatedWord(String text){
         Map<String, Integer>wordCount= new HashMap<>();
-        String[] words = text.split("\\W+");
+        String[] words = text.split("\\s+");
         for (String word:words){
             word= word.toLowerCase();
             wordCount.put(word,wordCount.getOrDefault(word,0)+1);
@@ -52,9 +52,7 @@ Map<String, Integer> wordCount=calculateWord(text);
         return wordCount;
 
     }
-//Bu ikisinde bir hata var ama nerede bulamadım!!!
 
-    public static Map<String, Integer> calculatedWord() {
-        return null;
-    }
+
+
 }
